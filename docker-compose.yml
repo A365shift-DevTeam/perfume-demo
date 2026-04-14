@@ -1,0 +1,12 @@
+version: '3.8'
+
+services:
+  webapp-frontend:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    image: webapp-frontend:latest
+    container_name: webapp-frontend
+    ports:
+      - "8080:80"
+    restart: unless-stopped
